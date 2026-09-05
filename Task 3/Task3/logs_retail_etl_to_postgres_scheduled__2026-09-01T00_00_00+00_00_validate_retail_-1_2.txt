@@ -1,0 +1,26 @@
+::group::Log message source details
+/opt/airflow/logs/dag_id=retail_etl_to_postgres/run_id=scheduled__2026-09-01T00:00:00+00:00/task_id=validate_retail/attempt=2.log
+::endgroup::
+[2026-09-01T04:20:50.786644Z] INFO - ::group::Pre Execute
+Task Identity ti_id=01a05b31-db98-72fe-9af8-4b4e2b24a5b6 dag_id=retail_etl_to_postgres task_id=validate_retail run_id=scheduled__2026-09-01T00:00:00+00:00 try_number=2 map_index=-1
+[2026-09-01T04:20:50.815116Z] INFO - DAG bundles loaded: dags-folder
+[2026-09-01T04:20:50.833675Z] INFO - Filling up the DagBag from /opt/airflow/dags/retail_etl_pipeline.py
+[2026-09-01T04:20:52.085486Z] INFO - Worker startup parse complete bundle_name=dags-folder  bundle_version=null  dag_file=retail_etl_pipeline.py  bundle_prepare_ms=20  dag_file_parse_ms=1252 
+[2026-09-01T04:20:52.161876Z] INFO - ::endgroup::
+[2026-09-01T04:20:52.240204Z] INFO - Validating retail data: /tmp/online_retail_raw.csv
+[2026-09-01T04:20:54.099407Z] INFO - Detected columns:
+[2026-09-01T04:20:54.099685Z] ERROR - Task failed with exceptionValueError: Missing expected columns: {'UnitPrice', 'InvoiceNo', 'CustomerID'}
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py, line 1579 in _run_task_and_map_outcome
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py, line 197 in wrapper
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py, line 2234 in _execute_task
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py, line 197 in wrapper
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py, line 2192 in _run_execute_callable
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/bases/operator.py, line 445 in wrapper
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/providers/standard/operators/python.py, line 231 in execute
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/providers/standard/operators/python.py, line 254 in execute_callable
+    File /home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/callback_runner.py, line 97 in run
+    File /opt/airflow/dags/retail_etl_pipeline.py, line 99 in validate_retail
+
+[2026-09-01T04:20:54.102055Z] INFO - ::group::Post Execute
+[2026-09-01T04:20:54.151524Z] INFO - ['Ã¯Â»Â¿Invoice', 'StockCode', 'Description', 'Quantity', 'InvoiceDate', 'Price', 'Customer ID', 'Country']
+[2026-09-01T04:20:54.189355Z] INFO - ::endgroup::

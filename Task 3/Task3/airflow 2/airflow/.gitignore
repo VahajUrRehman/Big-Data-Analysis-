@@ -1,0 +1,11 @@
+logs/
+config/
+*.pyc
+__pycache__/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.env.local
+.vscode/
+.DS_Store
