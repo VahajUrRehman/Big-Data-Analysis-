@@ -266,5 +266,3 @@ python retail_consumer.py    # consume, flag high-value, count in windows
 *Built as a Big Data & Cloud Computing capstone project.*
 
 </div>
-#   B i g - D a t a - A n a l y s i s -  
- 
