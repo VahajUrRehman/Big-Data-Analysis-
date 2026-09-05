@@ -27,10 +27,10 @@ The dataset is the [UCI Online Retail II](https://archive.ics.uci.edu/dataset/50
 
 ```mermaid
 flowchart LR
-    A["🗂️ Online Retail II\n(raw CSV)"] --> B["🐘 PostgreSQL\n+ MongoDB design"]
-    B --> C["⚡ Apache Spark\n(PySpark ETL + KPIs)"]
-    C --> D["🌀 Apache Airflow\n(batch orchestration)"]
-    D --> E["📡 Kafka + Kafdrop\n(real-time streaming)"]
+    A["🗂️ Online Retail II<br/>raw CSV"] --> B["🐘 PostgreSQL<br/>+ MongoDB design"]
+    B --> C["⚡ Apache Spark<br/>PySpark ETL + KPIs"]
+    C --> D["🌀 Apache Airflow<br/>batch orchestration"]
+    D --> E["📡 Kafka + Kafdrop<br/>real-time streaming"]
 
     style A fill:#1e2761,stroke:#1e2761,color:#fff
     style B fill:#2563eb,stroke:#2563eb,color:#fff
@@ -140,9 +140,9 @@ A fully containerised retail pipeline combining **batch orchestration** and **re
 
 ```mermaid
 flowchart LR
-    A[Extract\nretail_extract] --> B[Validate\nvalidate_retail]
-    B --> C[Transform\ntransform_retail]
-    C --> D[Load\nload_retail_to_postgres]
+    A["Extract<br/>retail_extract"] --> B["Validate<br/>validate_retail"]
+    B --> C["Transform<br/>transform_retail"]
+    C --> D["Load<br/>load_retail_to_postgres"]
     style A fill:#017cee,color:#fff
     style B fill:#017cee,color:#fff
     style C fill:#017cee,color:#fff
